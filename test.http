@@ -6,7 +6,16 @@ content-type: application/json
 
 {
     "name": "Dor",
-    "username": "dord",
+    "username": "dordi",
+    "email": "dor@dlop.com",
+    "password": "555555555"
+}
+
+### Post LOGIN
+POST http://10.10.100.10:3000/users/login
+content-type: application/json
+
+{
     "email": "dor@dlop.com",
     "password": "555555555"
 }
@@ -24,5 +33,5 @@ PUT http://10.10.100.10:3000/users/1
 content-type: application/json
 
 {
-    "name": "Moshe"
+    "name": "Yan"
 }
