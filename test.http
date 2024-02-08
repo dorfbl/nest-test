@@ -1,4 +1,5 @@
 GET http://10.10.100.10:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMCwibmFtZSI6IkRvciIsInVzZXJuYW1lIjoiZG9yZG9yMSIsImVtYWlsIjoiZG9yMTAwQGRsb3AuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwNzIzMzc2NSwiZXhwIjoxNzA3MjMzODY1fQ.w0lMjS-fOfDy25fqUAV-P6gjVV8ivWjYw8pccGUhIEM
 
 ### Post
 POST http://10.10.100.10:3000/users
@@ -6,8 +7,9 @@ content-type: application/json
 
 {
     "name": "Dor",
-    "username": "dordi",
-    "email": "dor@dlop.com",
+    "username": "dordor1",
+    "email": "dor100@dlop.com",
+    "role": "admin",
     "password": "555555555"
 }
 
@@ -16,7 +18,7 @@ POST http://10.10.100.10:3000/users/login
 content-type: application/json
 
 {
-    "email": "dor@dlop.com",
+    "email": "dor100@dlop.com",
     "password": "555555555"
 }
 
