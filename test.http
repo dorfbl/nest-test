@@ -1,16 +1,30 @@
 GET http://10.10.100.10:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMCwibmFtZSI6IkRvciIsInVzZXJuYW1lIjoiZG9yZG9yMSIsImVtYWlsIjoiZG9yMTAwQGRsb3AuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwNzIzMzc2NSwiZXhwIjoxNzA3MjMzODY1fQ.w0lMjS-fOfDy25fqUAV-P6gjVV8ivWjYw8pccGUhIEM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMCwibmFtZSI6IkRvciIsInVzZXJuYW1lIjoiZG9yZG9yMSIsImVtYWlsIjoiZG9yMTAwQGRsb3AuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwODUwMzAwMywiZXhwIjoxNzA4NTAzMTAzfQ.wnef2eE10f5h2hJRASOeWG-QTPgCeZTIEShzLkKu0Cw
 
 ### Post
 POST http://10.10.100.10:3000/users
 content-type: application/json
 
 {
-    "name": "Dor",
-    "username": "dordor1",
-    "email": "dor100@dlop.com",
-    "role": "admin",
-    "password": "555555555"
+  "heb_name" : "Test",
+  "username" : "username",
+  "email" : "user@mail.com",
+  "password" : "123456",
+  "dob" : "2023-05-01",
+  "blood" : "AB-",
+  "avatar" : "avatar.jpg",
+  "id_nr" : "123456789",
+  "birth_hospital" : "מאיר",
+  "birth_place" : "רחובות",
+  "heb_family" : "פייבל",
+  "eng_name" : "User",
+  "eng_family" : "name",
+  "phone" : "0987656766",
+  "gender" : 1,
+  "login" : "1",
+  "former_family" : null,
+  "former_eng_family" : null,
+  "map" : null
 }
 
 ### Post LOGIN
@@ -18,8 +32,8 @@ POST http://10.10.100.10:3000/users/login
 content-type: application/json
 
 {
-    "email": "dor100@dlop.com",
-    "password": "555555555"
+    "email": "dorfbl@gmail.com",
+    "password": "Dor21940"
 }
 
 
