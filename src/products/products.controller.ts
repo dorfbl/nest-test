@@ -1,6 +1,6 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query, Res } from '@nestjs/common';
 import { Pagination } from 'nestjs-typeorm-paginate';
-import { Observable } from 'rxjs';
+import { Observable, max } from 'rxjs';
 import { Product } from './products.interface';
 import { ProductsService } from './products.service';
 
@@ -27,5 +27,25 @@ export class ProductsController {
       orderBy,
       sortOrder,
     );
+  }
+
+  @Get('find')
+  findWithFilters(
+    @Query('name') name: string,
+    @Query('minPrice') minPrice: string,
+    @Query('maxPrice') maxPrice: string,
+    @Query('store') store: string,
+  ) {
+    return this.productsService.findWithFilters({
+      name,
+      store,
+      minPrice,
+      maxPrice,
+    });
+  }
+
+  @Get(':id')
+  findOne(@Param() params): Observable<any> {
+    return this.productsService.findOne(params.id);
   }
 }
